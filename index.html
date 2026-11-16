@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">  
+  <title>Музыкальный плеер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="img/iphone.png">
+  <link href="https://fonts.googleapis.com/css2?family=Kenia&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header_container">
+      <img src="img/MP.png" alt="MusicPlayer" class="logo">
+      <nav class="nav">
+        <ul class="nav_list">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#music">MUSIC</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#store">STORE</a></li>
+          <li><a href="#other">OTHER</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="home">
+      <div class="headline">
+        <h1>MUSIC<br>PLAYER</h1> 
+        <p class="home-description">American company formed in<br>2002 in Boston, Massachusetts</p>
+      </div>
+      <div class="player_img">
+        <img src="img/iphone.png" alt="" class="iphone">
+        <img src="img/kabel-phone.png" alt="" class="kabel">
+        <img src="img/headphones.png" alt="" class="headphones">
+      </div>        
+    </section>
+    <section id="music">
+      <div class="music-container">
+        <div class="left-column">
+          <h2 class="music-title">Music</h2>
+          <div class="button-column">
+            <button id="randomBtn" class="add-to-card">Listen music!</button>
+            <button id="choiceBtn" class="add-to-card">Choice music!</button>
+            <div id="musicList" style="display: none;" class="music-list-panel">
+              <ul class="music-track-list">
+                <li><button class="track-btn" data-track="audio/Business.mp3">Business</button></li>
+                <li><button class="track-btn" data-track="audio/CleaninOutMyCloset.mp3">Cleanin Out My Closet</button></li>
+                <li><button class="track-btn" data-track="audio/MyDadsGoneCrazy.mp3">My Dad's Gone Crazy</button></li>
+                <li><button class="track-btn" data-track="audio/SingForTheMoment.mp3">Sing for the Moment</button></li>
+                <li><button class="track-btn" data-track="audio/Superman.mp3">Superman</button></li>
+                <li><button class="track-btn" data-track="audio/TillIT.mp3">Till I Collapse</button></li>
+                <li><button class="track-btn" data-track="audio/WhiteAmerica.mp3">White America</button></li>
+                <li><button class="track-btn" data-track="audio/WithoutMe.mp3">Without Me</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="music-player">
+        <img src="img/eminem-show.png" alt="music-player" class="music-player-img">
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2 class="about-title">About</h2>
+      <p class="about-description">MusicPlayer gives you instant access to songs—Eminem's, or more specifically, his album, <br>The Eminem Show. <br>Just press play to stream everything, or you can choose your favorite.</p>
+    </section>
+    <section id="store">
+      <div class="store-container">
+        <div class="store-text">
+          <h2 class="store-title">Store</h2>
+          <div class="store-info">
+            <div class="store-buttons">
+              <a href="#" class="store-btn store-btn-win">Download<br>Windows x64</a>
+              <a href="#" class="store-btn store-btn-mac">Download<br>MacOS</a>
+            </div>
+            <div class="store-old" lang="ru">
+              <h3>Нужна предыдущая версия MPlayer?</h3>
+              <p>Вы можете скачать одну из предыдущих версий MPlayer, которая совместима с нужной вам версией операционной системы и определёнными устройствами.</p>
+              <a href="#">Выберите предыдущую версию MPlayer</a>
+            </div>
+          </div>
+        </div>
+        <img src="img/laptop.png" alt="MPlayer on a MacBook Pro" class="store-laptop">
+      </div>
+    </section>
+    <section id="other">
+      <div class="other-container">
+        <h2 class="other-title">Other</h2>
+        <div class="other-content" lang="ru">
+          <p>Нужны другие <i>альбомы</i> Eminem</p>
+          <p>Тогда вы на месте!</p>
+          <p>Нажмите на нужную кнопку ниже, чтобы перейти на сайт с другим альбомом Eminem</p>
+        </div>
+        <div class="other-links">
+          <div class="album-card">
+            <img src="img/curtain-call-1.png" alt="Curtain Call: The Hits" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/curtain-call-the-hits/1440723318" target="_blank" rel="noopener noreferrer">Curtain Call: The Hits</a>
+          </div>
+          <div class="album-card">
+            <img src="img/curtain-call-2.png" alt="Curtain Call 2" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/curtain-call-2/1637717381?l=ru" target="_blank" rel="noopener noreferrer">Curtain Call 2</a>
+          </div>
+          <div class="album-card">
+            <img src="img/marshall-mathers-lp.png" alt="The Marshall Mathers LP" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/the-marshall-mathers-lp/1440866782" target="_blank" rel="noopener noreferrer">The Marshall Mathers LP</a>
+          </div>
+          <div class="album-card">
+            <img src="img/recovery.png" alt="Recovery" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/recovery/1440734121" target="_blank" rel="noopener noreferrer">Recovery</a>
+          </div>
+          <div class="album-card">
+            <img src="img/kamikaze.png" alt="Kamikaze" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/kamikaze/1434770366" target="_blank" rel="noopener noreferrer">Kamikaze</a>
+          </div>
+          <div class="album-card">
+            <img src="img/the-death-of-slim-shady.png" alt="The Death of Slim Shady: Coup de Grâce" class="other-album-img">
+            <a class="other-link add-to-card-other" href="https://music.apple.com/us/album/the-death-of-slim-shady-coup-de-gr%C3%A2ce/1767753621" target="_blank" rel="noopener noreferrer">The Death of Slim Shady: Coup de Grâce</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>MPlayer Store</h3>
+        <ul>
+          <li><a href="#">Варианты оплаты</a></li>
+          <li><a href="#">Состояние заказа</a></li>
+          <li><a href="#">Помощь при покупке</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Ценности MPlayer</h3>
+        <ul>
+          <li><a href="#">Универсальный доступ</a></li>
+          <li><a href="#">Окружающая среда</a></li>
+          <li><a href="#">Конфиденциальность</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Учётная запись</h3>
+        <ul>
+          <li><a href="#">Управление вашим MPlayer ID</a></li>
+          <li><a href="#">Учётная запись MPlayer Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-text">Music<br>Player</p>
+        <ul class="footer-links">
+          <li><a href="#">© 2024 MusicPlayer. All rights reserved.</a></li>
+          <li><a href="#">Условия использования</a></li>
+          <li><a href="#">Продажа и возврат</a></li>
+          <li><a href="#">Юридическая информация</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

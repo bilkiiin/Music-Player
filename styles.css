@@ -1,0 +1,601 @@
+/* ==========================================
+   ОБЩИЙ СБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ ДЛЯ СТРАНИЦЫ 
+   ========================================== */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* Устанавливаем единый способ расчета размеров для всех элементов */
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;   /* Плавная прокрутка страницы */
+  }
+
+  section {
+    min-height: 100vh;         /* Минимальная высота секции 100% от высоты видимого окна */
+    min-height: 100svh;
+  }
+
+  /* ==========================================
+      НАСТРОЙКИ ГЛАВНОЙ СТРАНИЦЫ
+   ========================================== */
+
+  #home {
+    background-image: url(img/background-1.jpg);
+    background-size: cover; 
+    background-position: center;
+    padding: 0 122px;
+    position: relative;          /* Устанавливаем относительное позиционирование для родителя */
+    overflow: hidden;             /* Скрываем все, что выходит за пределы контейнера */
+  }
+
+  .headline {
+    color: #ffffff;
+    padding-top: 20vh;
+  }
+
+  .player_img img {
+    position: absolute;
+  }
+
+  .headline h1 {
+    font-family: 'Kenia', sans-serif;
+    font-size: 100px;
+  }
+
+  .home-description {
+    padding-top: 100px;
+    font-size: 18px;
+  }
+
+  .iphone {
+    z-index: 2;             /* Слой выше, чем у нижней картинки (2 > 1) */
+    right: 10%;
+    top: 14%;
+    width: 24%;
+  }
+
+  .kabel { 
+    z-index: 1; 
+    mix-blend-mode: screen;   /* кабель под телефоном */
+    right: 15.5%;
+    width: 15%;
+    top: 87%;
+  }  
+
+  .headphones {
+    z-index: 3;             /* Слой выше, чем у нижней картинки (3 > 2) */
+    top: 65%;
+    left: 30%;
+    width: 25%;
+  }
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+/* ==========================================
+   НАСТРОЙКИ ШАПКИ И НАВИГАЦИИ
+   ========================================== */
+
+  .header_container {  
+    display: flex;             /* Используем Flexbox для выравнивания элементов */
+    padding: 20px 6%;
+    align-items: center;       /* Выравниваем элементы по вертикали */
+  }
+
+  .nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav_list {
+    display: flex;
+    gap: 100px;
+    font-size: 22px;
+    list-style: none;
+  }
+
+  .nav_list a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+  }
+
+  .nav_list a:hover { 
+    color: red;
+  }
+
+/* ==========================================
+   Настройки страницы About 
+   ========================================== */
+
+  #about {
+    background: linear-gradient(to bottom, 
+      rgba(213, 48, 5, 1) 0%, 
+      rgba(0, 0, 0, 1) 70px
+    );    
+    padding: 83px 122px; 
+  }
+
+  .about-title {
+    font-size: 30px;
+    color:#ffffff;
+  }
+
+  .about-description {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.6; /* Увеличиваем межстрочный интервал для лучшей читаемости */
+    text-align: center;
+    margin-top: 22vh; /* Отступ сверху для отделения от заголовка */
+  }
+
+/* ==========================================
+   Настройки страницы Музыка
+   ========================================== */
+
+  #music {
+    background-color: #D53005;    /* Указываем цвет фона */
+    padding: 83px 122px;
+  }
+  
+   /* Родительский контейнер для всех элементов */
+  .music-container {
+    display: flex;
+  }
+
+  .music-title {
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  /* Левая колонка: заголовок + кнопки */
+  .left-column {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 15vh;
+    flex: 1 1 420px;
+  }
+
+  /* Вертикальный столбик кнопок */
+  .button-column {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    gap: 40px;              /* Расстояние между кнопками */
+  }
+
+  /* Правая обложка (главное изображение) */
+  .music-player-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .music-player {
+    flex: 0 1 520px;
+  }
+
+  /* Кнопки "Listen music!" и "Choice music!" */
+  .button-column .add-to-card {
+    width: 320px;
+    padding: 18px 0;
+    font-size: 22px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    background: linear-gradient(90deg, #B13E18 0%, #F3501A 100%);
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;   
+  }
+
+  .add-to-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .music-list-panel {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .music-track-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .track-btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: linear-gradient(90deg, #ffffff 0%, #f7d7c7 100%);
+    color: #601200;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .track-btn:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+/* ==========================================
+   Настройки страницы Other
+   ========================================== */
+
+  #other {
+    background: linear-gradient(to bottom, rgba(213, 48, 5, 1) 0%, rgba(0, 0, 0, 1) 70px);    
+    padding: 83px 122px;
+  }
+
+  .other-title {
+    font-size: 30px;
+    color:#ffffff;
+  }
+
+  .other-content {
+    font-size: 21px;
+    color: #ffffff;
+    margin-top: 22vh;
+    text-align: center;
+  }
+
+  .other-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 20px 24px;
+    padding: 12px 0 24px;
+    margin-top: 20px;
+  }
+
+  .other-album-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .add-to-card-other {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 45px;
+    padding: 10px 24px;
+    font-size: 18px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    background: linear-gradient(90deg, #B13E18 0%, #F3501A 100%);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .add-to-card-other:hover {
+    transform: translateY(-2px);
+  }
+
+/* ==========================================
+   Настройки страницы Store
+   ========================================== */
+
+  #store {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(213, 48, 5, 1) 70px);    
+    padding: 83px 122px;
+  }
+
+  .store-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .store-title {
+    font-size: 30px;
+    color:#ffffff;
+  }
+
+  .store-info {
+    font-size: 21px;
+    color: #ffffff;
+    margin-top: 22vh;
+    text-align: left;
+  }
+
+  .store-text {
+    flex: 0 0 340px;
+  }
+
+  .store-old {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .store-old h3 {
+    font-size: 21px;
+  }
+
+  .store-laptop {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .store-btn {
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 5px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    width: 240px;
+  }
+
+  .store-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .store-btn-win {
+    background: linear-gradient(90deg, #020202E5, #020202E5);
+    color: #ffffff;
+  }
+
+  .store-btn-mac {
+    background: #e6e6e6;
+    color: #000000;
+  }
+
+  .store-buttons { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+  }
+
+/* ==========================================
+   Настройки страницы Footer
+   ========================================== */
+
+  #footer {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(213, 48, 5, 1) 70px);    
+    padding: 83px 122px; 
+    color: #ffffff;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;    /* нижний блок уйдёт на новую строку */
+    justify-content: flex-end;  /* колонки прижать вправо */
+    gap: 60px;
+  }
+
+  .footer-column h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-column a {
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .footer-column a:hover {
+    color: #f7d7c7;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+  }
+
+  .footer-links a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .footer-text {
+    font-size: 28px;
+    font-family: 'Kenia', sans-serif;
+    text-transform: uppercase;
+  }
+
+/* ==========================================
+   Адаптивность: планшет
+   ========================================== */
+
+@media (max-width: 900px) {
+  section,
+  #home,
+  #footer {
+    padding: 80px 20px;
+  }
+
+  /* Шапка */
+  .nav_list {
+    gap: 24px;
+    font-size: 15px;
+  }
+
+  /* Home */
+  .headline h1 {
+    font-size: clamp(36px, 8vw, 60px);
+  }
+  .home-description {
+    font-size: 14px;
+  }
+  .iphone {
+    width: 30%;
+    top: 25%;
+    right: 7%;
+  }
+  .headphones {
+    width: 30%;
+    top: 70%;
+    left: 20%;
+  }
+
+  /* Колонки превращаются в столбик */
+  .music-container,
+  .store-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .left-column,
+  .music-player,
+  .store-text {
+    flex: none;
+  }
+  .store-info {
+    margin-top: 20px;
+  }
+
+  .store-laptop {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Other */
+  .other-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Футер */
+  .footer-container {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   Адаптивность: телефон
+   ========================================== */
+
+@media (max-width: 600px) {
+  section,
+  #home,
+  #footer {
+    padding: 50px 20px;
+  }
+
+  /* Шапка */
+  .logo {
+    width: 40px;
+  }
+  .nav_list {
+    gap: 12px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Home */
+  .headline h1 {
+    font-size: 36px;
+  }
+  .home-description {
+    font-size: 12px;
+  }
+  .iphone {
+    width: 40%;
+    top: 60%;
+    right: 3%;
+  }
+  .kabel {
+    width: 20%;
+    top: 93%;
+    right: 15%;
+  }
+  .headphones {
+    width: 40%;
+    top: 85%;
+    left: 10%;
+  }
+
+  /* About */
+  .about-description br {
+    display: none;
+  }
+
+  /* Music */
+  .music-player-img {
+    width: 100%;
+  }
+  .button-column .add-to-card,
+  .music-list-panel {
+    max-width: 100%;
+  }
+
+  /* Other: одна колонка */
+  .other-links {
+    grid-template-columns: 1fr;
+  }
+
+  /* Футер */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column a {
+    font-size: 13px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-links a {
+    font-size: 13px;
+  }
+}
